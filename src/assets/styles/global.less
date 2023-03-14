@@ -1,0 +1,22 @@
+.remMixin() {
+    @functions: ~`(function() { 
+      var rem = 37.5;
+      // px 转 rem
+      this.px2rem = function(size) {
+        return (size / rem) + 'rem';
+      };
+    })()`;
+  }
+.remMixin();
+
+// 内部元素水平垂直居中
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+  color:#333;
+  font-size: ~`px2rem(20)`;
+}
